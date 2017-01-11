@@ -1,0 +1,15 @@
+﻿<Window x:Class="Projekt_Poprawa.OknoWyswietlaniaAdnotacji"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OknoWyswietlaniaAdnotacji" Height="365.671" Width="652.701" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <WrapPanel>
+            <TextBox Margin="32" Width="581" Height="189" x:Name="wyswietlaczAdnotacji"></TextBox>
+            <Button Height="37" Width="157" Margin="47,0,0,0" FontWeight="Bold" FontSize="16" Click="PokazDzisiejsze">Pokaż dzisiejsze</Button>
+            <Button Height="37" Width="157" Margin="47,0,0,0" FontWeight="Bold" FontSize="16" Click="Zamknij">Zamknij aplikację</Button>
+            <Button Height="37" Width="157" Margin="47,0,0,0" FontWeight="Bold" FontSize="16" Click="Cofnij">Cofnij</Button>
+
+        </WrapPanel>
+
+    </Grid>
+</Window>
