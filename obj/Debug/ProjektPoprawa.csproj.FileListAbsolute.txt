@@ -62,3 +62,5 @@ C:\Users\Adrianek\Desktop\ProjektPoprawa\ProjektPoprawa\obj\Debug\ProjektPoprawa
 C:\Users\Adrianek\Desktop\ProjektPoprawa\ProjektPoprawa\obj\Debug\ProjektPoprawa.csproj.GenerateResource.Cache
 C:\Users\Adrianek\Desktop\ProjektPoprawa\ProjektPoprawa\obj\Debug\OknoKalkulatora.baml
 C:\Users\Adrianek\Desktop\ProjektPoprawa\ProjektPoprawa\obj\Debug\OknoKalkulatora.g.cs
+C:\Users\Adrianek\Desktop\ProjektPoprawa\ProjektPoprawa\obj\Debug\OknoFaktur.baml
+C:\Users\Adrianek\Desktop\ProjektPoprawa\ProjektPoprawa\obj\Debug\OknoFaktur.g.cs

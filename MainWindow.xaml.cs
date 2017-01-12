@@ -34,6 +34,10 @@ namespace Projekt_Poprawa
 
         private void przyciskWyjscia(object sender, RoutedEventArgs e)
         {
+            if(File.Exists("confirmed.txt"))
+            {
+                File.Delete("confirmed.txt");
+            }
             Application.Current.Shutdown();
         }
 

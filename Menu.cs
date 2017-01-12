@@ -86,11 +86,6 @@ namespace Projekt_Poprawa
                 Directory.CreateDirectory("Faktury_" + DateTime.Now.Year.ToString());
             }
             Directory.SetCurrentDirectory("Faktury_" + DateTime.Now.Year.ToString());
-            if (!Directory.Exists("Faktury_" + DateTime.Now.Month.ToString()))
-            {
-                Directory.CreateDirectory("Faktury_" + DateTime.Now.Month.ToString());
-            }
-            Directory.SetCurrentDirectory("Faktury_" + DateTime.Now.Month.ToString());
             if (!File.Exists(NazwaPlikuTxt))
             {
                 TextWriter Plik = new StreamWriter(NazwaPlikuTxt, true);
