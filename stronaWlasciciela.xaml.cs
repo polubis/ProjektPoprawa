@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for stronaWlasciciela.xaml
+    /// Strona pozwala na zarejestrowanie sie wlascicielowi. Tworzona sa potem odpowiednie pliki umozliwajace pozniejsze uwierzytelnianie uzytkownika w aplikacji.
     /// </summary>
     public partial class stronaWlasciciela : Page
     {

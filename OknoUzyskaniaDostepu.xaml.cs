@@ -17,7 +17,8 @@ using ProjektPoprawa;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for OknoUzyskaniaDostepu.xaml
+    /// Okienko zabezpieczajace przed dostepem do faktur. Do faktur moga miec dostep tylko wlasciciele. Jedno wpisanie potrzebnych danych do wartosci w tym okienku
+    /// pozwala na stworzenie plikut tekstowego , ktory uniewaznia wywolywanie tego okienka. Jednak po wylogowaniu lub zsmaknieciu aplikacji plik ten jest usuwany.
     /// </summary>
     public partial class OknoUzyskaniaDostepu : Window
     {

@@ -16,7 +16,7 @@ using System.IO;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for OknoWyswietlaniaAdnotacji.xaml
+    /// W tym okienku mozemy wyswietlac adnotacje wystawione przez innych uzytkownikow. Wyswietlac dzisiejsze. 
     /// </summary>
     public partial class OknoWyswietlaniaAdnotacji : Window
     {

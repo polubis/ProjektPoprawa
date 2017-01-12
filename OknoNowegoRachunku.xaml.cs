@@ -19,7 +19,9 @@ namespace Projekt_Poprawa
 {
     /// <summary>
     /// 
-    /// 
+    /// W tym oknie mozliwe jest stworzenie nowego rachunku, zapisanie go do pliku tekstowego, a takze korzystanie z opcji kalkulator,cofnij , wyjscie i wielu innych.
+    /// Mozemy powiekszac nasze Menu i dodawac dania do koszyka obserwujac jednoczesnie zwiekszajacy sie stan Sumy koncowej. Mozemy takze skorzystac z wyszukiwarki lub
+    /// w informacjiach dowiedziec sie ile rekordow mamy zarowno w koszyku jak i w Menu oryginalnym. 
     /// </summary>
     public partial class OknoNowegoRachunku : Window
     {
@@ -75,7 +77,6 @@ namespace Projekt_Poprawa
             NoweMenu.DodajDanie(43, "Zapiekanka mazurska", 11, "DanieGłówne");
             NoweMenu.DodajDanie(44, "Łosoś", 17, "DanieGłówne");
             ListaDan.ItemsSource = NoweMenu.zwracamListeDan();
-            ApplicationCommands.Open.InputGestures.Add(new KeyGesture(Key.K, ModifierKeys.Control));  // Uzbrojenie kontrolek w skrot
             CollectionView Widok = (CollectionView)CollectionViewSource.GetDefaultView(ListaDan.ItemsSource);
             Widok.Filter = IdFilter;
 
@@ -129,7 +130,7 @@ namespace Projekt_Poprawa
             Okno.Show();
         }
 
-        private void Odswiezanie(object sender, TextChangedEventArgs e)
+        private void Odswiezanie(object sender, TextChangedEventArgs e) // Odswieza zawartosc listy
         {
             OdswiezamListy(ListaDan);
         }

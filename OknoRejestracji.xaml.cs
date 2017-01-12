@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for OknoRejestracji.xaml
+    /// W tym okienku mozemy zalozyc konto, po jego zamknieciu mozemy skorzystac z opcji rejestracji dopiero po restarcie calej aplikacji.
     /// </summary>
     public partial class OknoRejestracji : Window, IZarzadzanieOkienkami
     {

@@ -16,7 +16,7 @@ using System.IO;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for OknoNowejAdnotacji.xaml
+    /// W tym okienku mozna dodawac adnotacje, dla pracownikow od innych uzytkownikow aplikacji, a takze usuwac adnotacje starsze czy wszystkie.
     /// </summary>
     public partial class OknoNowejAdnotacji : Window
     {

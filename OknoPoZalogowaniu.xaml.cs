@@ -17,7 +17,7 @@ using ProjektPoprawa;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for OknoPoZalogowaniu.xaml
+    /// W tyk okienku aplikacja daje nam mozliwosc wyboru opcji. Jest poprostu skupiskiem wiekszosci opcji i posredniczy pomieczy funkcjami aplikacji.
     /// </summary>
     public partial class OknoPoZalogowaniu : Window
     {

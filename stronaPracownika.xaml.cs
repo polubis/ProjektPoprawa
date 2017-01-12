@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for stronaPracownika.xaml
+    /// Strona umozliwa zarejestrowanie sie pracownikowi.
     /// </summary>
     public partial class stronaPracownika : Page
     {
