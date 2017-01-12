@@ -59,6 +59,9 @@
     <Compile Include="IZarzadzanieMenu.cs" />
     <Compile Include="IZarzadzanieOkienkami.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="OknoFaktur.xaml.cs">
+      <DependentUpon>OknoFaktur.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OknoKalkulatora.xaml.cs">
       <DependentUpon>OknoKalkulatora.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OknoFaktur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OknoKalkulatora.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +191,9 @@
     <Resource Include="Pictures\kalendarz.png" />
     <Resource Include="Pictures\przystan.png" />
     <Resource Include="Pictures\searchIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\blokada.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

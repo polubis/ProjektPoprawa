@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using ProjektPoprawa;
 
 namespace Projekt_Poprawa
 {
@@ -28,9 +29,9 @@ namespace Projekt_Poprawa
 
         private void DodajAdnotacje(object sender, RoutedEventArgs e)
         {
-            OknoUzyskaniaDostepu Okno = new OknoUzyskaniaDostepu();
+            OknoNowejAdnotacji Okno = new OknoNowejAdnotacji();
             Okno.Show();
-            this.Close();
+            this.Close();          
         }
 
         private void NowyRachunek(object sender, RoutedEventArgs e)
@@ -46,6 +47,10 @@ namespace Projekt_Poprawa
         }
         private void Wyloguj(object sender, RoutedEventArgs e)
         {
+            if(File.Exists("confirmed.txt"))
+            {
+                File.Delete("confirmed.txt");
+            }
             this.Close();
             MainWindow Okno = new MainWindow();
             Okno.Show();
@@ -53,7 +58,19 @@ namespace Projekt_Poprawa
 
         private void WyswietlFakture(object sender, RoutedEventArgs e)
         {
-
+            if (File.Exists("confirmed.txt"))
+            {
+                OknoFaktur Okno = new OknoFaktur();
+                Okno.Show();
+                this.Close();
+            }
+            else
+            {
+                OknoUzyskaniaDostepu Okno = new OknoUzyskaniaDostepu();
+                Okno.Show();
+                this.Close();
+            }
+           
         }
 
         private void WyswietlAdnotacje(object sender, RoutedEventArgs e)

@@ -13,11 +13,13 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for OknoNowegoRachunku.xaml
+    /// 
+    /// 
     /// </summary>
     public partial class OknoNowegoRachunku : Window
     {
@@ -102,6 +104,10 @@ namespace Projekt_Poprawa
 
         private void CommandBinding_Executed_3(object sender, ExecutedRoutedEventArgs e)
         {
+            if (File.Exists("confirmed.txt"))
+            {
+                File.Delete("confirmed.txt");
+            }
             Application.Current.Shutdown();
         }
 

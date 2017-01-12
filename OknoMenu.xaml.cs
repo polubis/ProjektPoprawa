@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Projekt_Poprawa
 {
@@ -82,6 +83,10 @@ namespace Projekt_Poprawa
 
         private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e) //2. Odnosi sie do exita i zamyka 
         {
+            if (File.Exists("confirmed.txt"))
+            {
+                File.Delete("confirmed.txt");
+            }
             Application.Current.Shutdown();
         }
 

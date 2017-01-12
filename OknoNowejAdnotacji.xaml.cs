@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Projekt_Poprawa
 {
@@ -27,6 +28,10 @@ namespace Projekt_Poprawa
 
         private void ZamknijAplikacje(object sender, RoutedEventArgs e)
         {
+            if (File.Exists("confirmed.txt"))
+            {
+                File.Delete("confirmed.txt");
+            }
             Application.Current.Shutdown();
         }
 

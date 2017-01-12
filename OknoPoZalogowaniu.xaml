@@ -6,44 +6,54 @@
         <Grid.Background>
             <ImageBrush ImageSource="Pictures\przystan.png"/>
         </Grid.Background>
-        <WrapPanel Margin="0,0,0,205">
-            <Label Height="51" Width="327" Margin="22,10,0,0" Content="Pamiętaj, że jako właściciel możesz dodawać &#xA;                adnotacje dla pracowników." FontWeight="ExtraBlack" FontSize="14" FontStyle="Italic"/>
-        </WrapPanel>
-        <WrapPanel Margin="0,70,0,0">
-            <Button Height="40" Width="121" Margin="52,40,0,0" FontWeight="Bold" Click="DodajAdnotacje" Cursor="Hand" Foreground="Black">
+        <WrapPanel Margin="0,0,0,205"/>
+        <WrapPanel>
+            <Button Height="40" Width="121" Margin="52,40,0,0" FontWeight="Bold" Click="DodajAdnotacje" Cursor="Hand" Foreground="White" BorderBrush="#FF2B0A0A">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FFDEDEDE" Offset="1"/>
+                        <GradientStop Color="#FFE42E2E" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background> Dodaj adnotacje
             </Button>
-            <Button Height="40" Width="121" Margin="10,40,0,0" FontWeight="Bold" Click="NowyRachunek" Foreground="Black" Cursor="Hand" FontSize="14">
-                <Button.Background>
-                    <ImageBrush/>
-                </Button.Background> Nowy rachunek
-            </Button>
-            <Button Height="40" Width="121" Margin="52,10,0,0" FontWeight="Bold" Click="WyswietlFakture" Cursor="Hand" Foreground="Black">
+            <Button Height="40" Width="121" Margin="10,40,0,0" FontWeight="Bold" Click="NowyRachunek" Cursor="Hand" FontSize="14" Foreground="White">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#FFEC2A2A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background> Nowy rachunek
+            </Button>
+            <Button Height="40" Width="121" Margin="52,10,0,0" FontWeight="Bold" Click="WyswietlFakture" Cursor="Hand" Foreground="White">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF6E5F5F" Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background> Wyświetl fakturę
             </Button>
-            <Button Width="121" Height="40" Margin="10,10,0,0" FontWeight="Bold" Click="PokazMenu" Foreground="White" Cursor="Hand" FontSize="14" >
+            <Button Width="121" Height="40" Margin="10,10,0,0" FontWeight="Bold" Click="PokazMenu" Cursor="Hand" FontSize="14" Foreground="White" >
                 <Button.Background>
-                    <ImageBrush/>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FFEE4242" Offset="1"/>
+                    </LinearGradientBrush>
                 </Button.Background> Pokaż menu
             </Button>
-            <Button Height="40" Margin="52,10,0,0" FontWeight="Bold" Click="WyswietlAdnotacje" Width="121" Foreground="Black" Cursor="Hand">
+            <Button Height="40" Margin="52,10,0,0" FontWeight="Bold" Click="WyswietlAdnotacje" Width="121" Foreground="White" Cursor="Hand">
                 <Button.Background>
-                    <ImageBrush/>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FFE83B3B" Offset="1"/>
+                    </LinearGradientBrush>
                 </Button.Background> Wyświetl adnotacje
             </Button>
             <Button Height="40" Margin="10,10,0,0" Foreground="#FFF0F0F0"  BorderBrush="#FF050C2E" Cursor="Hand" Click="Wyloguj" Width="121" FontWeight="Bold" FontSize="14">
                 <Button.Background>
-                    <ImageBrush/>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                    </LinearGradientBrush>
                 </Button.Background> Wyloguj
             </Button>
         </WrapPanel>

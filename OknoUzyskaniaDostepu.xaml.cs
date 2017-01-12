@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using ProjektPoprawa;
 
 namespace Projekt_Poprawa
 {
@@ -59,14 +60,17 @@ namespace Projekt_Poprawa
                         bool Rezultat = Faktura.sprawdzamDane(pobierzKod.Password, pobierzLogin.Text);
                         if (Rezultat == true)
                         {
-                            MessageBox.Show("Uwierzytelnianie pomyślne");
-                            OknoNowejAdnotacji Okno = new OknoNowejAdnotacji();
+                            Directory.SetCurrentDirectory(Sciezka);
+                            File.CreateText("confirmed.txt");
+                            OknoFaktur Okno = new OknoFaktur();
                             this.Close();
                             Okno.Show();
 
                         }
                         else
+                        {
                             MessageBox.Show("Błędny login lub klucz");
+                        }
                         Directory.SetCurrentDirectory(Sciezka);
                     }
 
