@@ -17,11 +17,11 @@ namespace Projekt_Poprawa
 {
     class Faktury
     {
-        
+        // Tworze dwie listy potrzebne do wyszukiwania faktur i pokazania faktur na starcie okienka - OknoFaktur
         public string Nazwa { get; set; }
        
         private List<Faktury> ListaFaktur;
-        private List<Faktury> ListaPoWyszukaniu;
+        private List<Faktury> ListaPoWyszukaniu;  
         public Faktury() { ListaFaktur = new List<Faktury>(); ListaPoWyszukaniu = new List<Faktury>(); }
         public List<Faktury> ZwracamListeFaktur()
         {
@@ -36,7 +36,7 @@ namespace Projekt_Poprawa
             this.Nazwa = Nazwa;
        
         }
-        public bool sprawdzamDane(string Kod, string Login)
+        public bool sprawdzamDane(string Kod, string Login)   // Sprawdza zawartosc pliku tekstowego o ponizszej nazwie
         {
             StreamReader Odczyt = new StreamReader(Login + ".txt");
             using (Odczyt)
@@ -54,7 +54,7 @@ namespace Projekt_Poprawa
                 }
             }
         }
-        public void WyswietlamWszystkieFaktury(ListView Lista)
+        public void WyswietlamWszystkieFaktury(ListView Lista)  // Wyswietla faktury na starcie w kontrolce ListView
         {
             
             string Sciezka = Directory.GetCurrentDirectory();
@@ -72,12 +72,12 @@ namespace Projekt_Poprawa
             }
             
         }
-        public string PrzycinamSciezke(string Sciezka)
+        public string PrzycinamSciezke(string Sciezka)  // Obcina sciezke uzyskana za pomoca funkcji GetFiles tak aby byla wygodniejsza w odczycie
         {
             string Nowy = Sciezka.Remove(0, 13);
             return Nowy;
         }
-        public void SzukamPoRoku(string Rok,string Miesiac,string Dzien,ListView Lista)
+        public void SzukamFaktury(string Rok,string Miesiac,string Dzien,ListView Lista)  // Funckja umozliwiajaca znalezienie faktury po Roku dniu i miesiacu
         {
             string Sciezka = Directory.GetCurrentDirectory();
             if(!Directory.Exists("Faktury_"+Rok))

@@ -22,7 +22,7 @@ namespace Projekt_Poprawa
     class Adnotacje
     {
         public Adnotacje() { }
-        public void TworzePlikAdnotacje(string Zawartosc)
+        public void TworzePlikAdnotacje(string Zawartosc)  // Funkcja zajmujaca sie tworzeniem folderu dla opcji Adnotacje , 
         {
             string Sciezka = Directory.GetCurrentDirectory();
             Directory.SetCurrentDirectory("Adnotacje");
@@ -40,10 +40,10 @@ namespace Projekt_Poprawa
                 Directory.SetCurrentDirectory(Sciezka);
                 MessageBox.Show("Dodano adnotacje");
             }
-            UsuwamStareAdnotacje();
+            UsuwamStareAdnotacje();   
 
         }
-        public void DodajeAdnotacje(string Zawartosc, TextWriter Zapis)
+        public void DodajeAdnotacje(string Zawartosc, TextWriter Zapis)  // Zapisywanioe do pliku tekstowego zawartosci z ze zmiennej czas.
         {
             string Czas = DateTime.Today.DayOfWeek + "," + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
             using (Zapis)
@@ -53,7 +53,7 @@ namespace Projekt_Poprawa
                 Zapis.Close();
             }
         }
-        private void UsuwamStareAdnotacje()
+        private void UsuwamStareAdnotacje()   // Funkcja usuwa stare adnotacje Dziala po minieciu 3 dni od aktualnej daty
         {
             int DataUsuniecia = Convert.ToInt32(DateTime.Today.Day) - 3;
             try
@@ -70,7 +70,7 @@ namespace Projekt_Poprawa
                 MessageBox.Show(k.Message);
             }
         }
-        public void WyswietlAdnotacje(TextBox Text)
+        public void WyswietlAdnotacje(TextBox Text)  // Wyswietla adnotacje w textBoxie (pobiera ja z folderu i pliku tekstowego)
         {
             string[] Pliki = Directory.GetFiles("Adnotacje");
             string[] OdczytaneAdnotacje = new string[Pliki.Length];
@@ -86,7 +86,7 @@ namespace Projekt_Poprawa
             }
 
         }
-        public void UsunWszystkieAdnotacje(TextBox Text)
+        public void UsunWszystkieAdnotacje(TextBox Text)  // Usuwama adnotacje wszystkie.
         {
             string[] Pliki = Directory.GetFiles("Adnotacje");
             if (Pliki.Length <= 0)
@@ -103,7 +103,7 @@ namespace Projekt_Poprawa
             }
 
         }
-        public void UsunStarszeAdnotacje(TextBox Text)
+        public void UsunStarszeAdnotacje(TextBox Text) // Usuwa starsze adnotacje np wszystkie oprocz dzisiejszych
         {
             string[] Pliki = Directory.GetFiles("Adnotacje");
             if (Pliki.Length <= 0)
@@ -127,7 +127,7 @@ namespace Projekt_Poprawa
 
             }
         }
-        public void PokazDzisiejszeAdnotacje(TextBox Text)
+        public void PokazDzisiejszeAdnotacje(TextBox Text)  // Pokazuje adnotacje stworzone dzisiaj (Uzywane w oknie OknoWyswietlaniaAdnotacji)
         {
             string[] Pliki = Directory.GetFiles("Adnotacje");
             string[] OdczytaneAdnotacje = new string[Pliki.Length];
@@ -150,7 +150,7 @@ namespace Projekt_Poprawa
                 }
             }
         }
-        ~Adnotacje() { }
+        ~Adnotacje() { } 
 
 
     }

@@ -17,7 +17,7 @@ using System.IO;
 namespace ProjektPoprawa
 {
     /// <summary>
-    /// Interaction logic for OknoFaktur.xaml
+    /// Znajduja sie tu funkcje potrzebne dla faktur. Pozwalaja na wyszukiwanie , dodawanie i umozliwiaja wszystkie koniecznie operacje na fakturach.
     /// </summary>
     public partial class OknoFaktur : Window
     {
@@ -25,7 +25,7 @@ namespace ProjektPoprawa
         public OknoFaktur()
         {
             InitializeComponent();
-            NowaFaktura.WyswietlamWszystkieFaktury(ListaFaktur);
+            NowaFaktura.WyswietlamWszystkieFaktury(ListaFaktur);  // Wyswietla faktury i jednoczesnie odslania potrzebne ramki
             Ramka1.Visibility = Visibility.Visible;
             Ramka2.Visibility = Visibility.Visible;
             Ramka3.Visibility = Visibility.Visible;
@@ -33,7 +33,7 @@ namespace ProjektPoprawa
             
             
         }
-        private void Wyswietlam()
+        private void Wyswietlam()  // Wyswietla wybrana fakture
         {
             Faktury Nowa = (Faktury)ListaFaktur.SelectedItem;
             string Sciezka = Directory.GetCurrentDirectory();
@@ -62,7 +62,7 @@ namespace ProjektPoprawa
             this.Close();
         }
 
-        private void Znajdz(object sender, RoutedEventArgs e)
+        private void Znajdz(object sender, RoutedEventArgs e) // Wyszukiwarka do faktur(po Roku , miesiacu i dniu)
         {
             NowaFaktura.ZwracamListePoWyszukaniu().Clear();
             string Rok = pobierzRok.Text;
@@ -83,7 +83,7 @@ namespace ProjektPoprawa
                 {
                     try
                     {
-                        NowaFaktura.SzukamPoRoku(Rok, Miesiac, Dzien, ListaFaktur);
+                        NowaFaktura.SzukamFaktury(Rok, Miesiac, Dzien, ListaFaktur);
                         CollectionViewSource.GetDefaultView(ListaFaktur.ItemsSource).Refresh();
                        
                     }
@@ -100,7 +100,7 @@ namespace ProjektPoprawa
            
         }
 
-        private void WyswietlFakture(object sender, RoutedEventArgs e)
+        private void WyswietlFakture(object sender, RoutedEventArgs e) // Wyswietla fakture
         {
             int WybranaFaktura = ListaFaktur.SelectedIndex;
             if(WybranaFaktura!=-1)
@@ -117,7 +117,7 @@ namespace ProjektPoprawa
                 MessageBox.Show("Wybierz fakturę");
             }
         }
-        private void CofnijDoFaktur(object sender, RoutedEventArgs e)
+        private void CofnijDoFaktur(object sender, RoutedEventArgs e)  // Odslania i ukrywa potrzebne kontrolki
         {
             Ramka1.Visibility = Visibility.Visible;
             Ramka2.Visibility = Visibility.Visible;

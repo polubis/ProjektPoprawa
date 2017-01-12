@@ -18,7 +18,7 @@ using System.IO;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Okno glowne. Mozemy w nim zalozyc konto, czy zalogowac sie do aplikacji. Jest wyswietlane zawsze na starcie. 
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -32,7 +32,7 @@ namespace Projekt_Poprawa
 
         }
 
-        private void przyciskWyjscia(object sender, RoutedEventArgs e)
+        private void przyciskWyjscia(object sender, RoutedEventArgs e) // Zamyka aplikacje i usuwa plik confirmed
         {
             if(File.Exists("confirmed.txt"))
             {
@@ -53,7 +53,7 @@ namespace Projekt_Poprawa
             }
         }
 
-        private void Zaloguj(object sender, RoutedEventArgs e)
+        private void Zaloguj(object sender, RoutedEventArgs e) // Umozliwia zalogowanie sie i sprawdza poprawnosc danych
         {
             if (!Directory.Exists("Adnotacje"))
             {
@@ -83,14 +83,14 @@ namespace Projekt_Poprawa
                         SzukaniePlikuTxt(Login + ".txt", Login + Haslo);
                         Directory.SetCurrentDirectory(Powrot);
                     }
-                    konto.TworzeLogi(pobierzLogin.Text);
+                    konto.TworzeLogi(pobierzLogin.Text); 
 
                 }
 
 
             }
         }
-        private void SzukaniePlikuTxt(string Nazwa, string Zawartosc)
+        private void SzukaniePlikuTxt(string Nazwa, string Zawartosc) // Szuka potrzebnego pliku tekstowego i odczytuje go jednoczesnie porownujac jego zawartosc
         {
 
             if (File.Exists(Nazwa))

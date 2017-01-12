@@ -17,7 +17,7 @@ using System.IO;
 namespace Projekt_Poprawa
 {
     /// <summary>
-    /// Interaction logic for OknoMenu.xaml
+    /// Wyswietlane w tym oknie jest podstawowe menu. Mozliwe jest takze skorzystanie z kalkulatora cofniecie sie do okna po zalogowaniu, a takze zamkniecie aplikacji.
     /// </summary>
     public partial class OknoMenu : Window
     {

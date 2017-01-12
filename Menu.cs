@@ -25,7 +25,7 @@ namespace Projekt_Poprawa
             ListaDan = new List<Dania>();
             listaDanKopia = new List<Dania>();
         }
-        public void DodajDanie(int ID, string Nazwa, double Cena, string Rodzaj)
+        public void DodajDanie(int ID, string Nazwa, double Cena, string Rodzaj)  // Dodaje danie do listy
         {
             if (string.IsNullOrEmpty(ID.ToString()) || string.IsNullOrEmpty(Nazwa) || string.IsNullOrEmpty(Convert.ToString(Cena)) || string.IsNullOrEmpty(Rodzaj))
             {
@@ -62,7 +62,7 @@ namespace Projekt_Poprawa
                 tworzeFaktury(Convert.ToString(Suma));
             }
         }
-        public string SumaPoDodaniu()
+        public string SumaPoDodaniu()  // Kontroluje wartosc w aktualnym stanie kwoty do zaplaty
         {
             double suma = 0;
             foreach (var element in listaDanKopia)
@@ -71,7 +71,7 @@ namespace Projekt_Poprawa
             }
             return suma.ToString();
         }
-        public string SumaPoOdjeciu(double Suma, Dania Obiekt)
+        public string SumaPoOdjeciu(double Suma, Dania Obiekt) //Kontroluje wartosc w aktualnym stanie kwoty do zaplaty
         {
             Suma = Suma - Obiekt.Cena;
             return Suma.ToString();

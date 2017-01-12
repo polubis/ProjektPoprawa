@@ -23,7 +23,7 @@ namespace Projekt_Poprawa
         {
             listaUzytkownikow = new List<Uzytkownicy>();
         }
-        public void TworzeLogi(string Login)
+        public void TworzeLogi(string Login)  // Podczas klikniecia przycisku zaloguj tworzy sie folder i informacja o tym, ze ktos sie probowal zalogowac(jego nazwa)+ data
         {
             string Sciezka = Directory.GetCurrentDirectory();
             string Czas = " " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
@@ -48,7 +48,7 @@ namespace Projekt_Poprawa
             Directory.SetCurrentDirectory(Sciezka);
         }
 
-        private void TworzeStrukturePlikow(DirectoryInfo directory, string Zawartosc, string Przywitanie, string Sciezka, string Nazwa, string Klucz)
+        private void TworzeStrukturePlikow(DirectoryInfo directory, string Zawartosc, string Przywitanie, string Sciezka, string Nazwa, string Klucz) // Funkcja tworzy strukture folderu i plikow potrzebna do rejestracji
         {
             if (!Directory.Exists(directory.ToString()))
             {
@@ -72,19 +72,19 @@ namespace Projekt_Poprawa
 
         }
 
-        private void tworzeniePlikowPracownicy(string Login, string Haslo, string Funkcja)
+        private void TworzeniePlikowPracownicy(string Login, string Haslo, string Funkcja)  // Przekazujemy parametry do funkcji TworzeStrukturePlikow dla Pracownikow
         {
             DirectoryInfo Katalog = new DirectoryInfo("Pracownicy");
             TworzeStrukturePlikow(Katalog, Login + Haslo, Login, Directory.GetCurrentDirectory(), Login, "");
 
         }
-        private void tworzeniePlikowWlasciciele(string Login, string Haslo, string Klucz)
+        private void TworzeniePlikowWlasciciele(string Login, string Haslo, string Klucz) // Przekazujemy parametry do funkcji TworzeStrukturePlikow dla Wlascicieli
         {
             DirectoryInfo Katalog = new DirectoryInfo("Wlasciciele");
             TworzeStrukturePlikow(Katalog, Login + Haslo, Login, Directory.GetCurrentDirectory(), Login, Klucz);
         }
 
-        public void dodajPracownika(string Login, string Haslo, string Funkcja)
+        public void dodajPracownika(string Login, string Haslo, string Funkcja) // Dodajemy do listy pracownika
         {
             if (string.IsNullOrEmpty(Login) || string.IsNullOrEmpty(Haslo) || string.IsNullOrEmpty(Funkcja))
             {
@@ -95,7 +95,7 @@ namespace Projekt_Poprawa
                 try
                 {
                     listaUzytkownikow.Add(new Pracownik(Login, Haslo, Funkcja));
-                    tworzeniePlikowPracownicy(Login, Haslo, Funkcja);
+                    TworzeniePlikowPracownicy(Login, Haslo, Funkcja);
 
                 }
                 catch (Exception k)
@@ -105,7 +105,7 @@ namespace Projekt_Poprawa
             }
 
         }
-        public void dodajWlasciciela(string Login, string Haslo, string Klucz)
+        public void dodajWlasciciela(string Login, string Haslo, string Klucz) // Dodajemy do listy wlasciciela
         {
             if (string.IsNullOrEmpty(Login) || string.IsNullOrEmpty(Haslo) || string.IsNullOrEmpty(Klucz))
             {
@@ -116,7 +116,7 @@ namespace Projekt_Poprawa
                 try
                 {
                     listaUzytkownikow.Add(new Wlasciciel(Login, Haslo, Klucz));
-                    tworzeniePlikowWlasciciele(Login, Haslo, Klucz);
+                    TworzeniePlikowWlasciciele(Login, Haslo, Klucz);
                 }
                 catch (Exception k)
                 {
